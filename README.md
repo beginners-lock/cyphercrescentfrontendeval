@@ -1,9 +1,15 @@
 # Bitcoin Price Chart with Annotations using Vue.js, d3, and d3 Annotations
 
-This project aims to re-create a line chart depicting the price of Bitcoin from 2017-2018, along with annotations for important events. The chart is implemented using Vue.js, d3, and d3 annotations. The submission is written in Vue 3 and TypeScript.
+This project aims to re-create a line chart depicting the price of Bitcoin from 2017-2018, along with annotations for important events. 
+The chart is implemented using Vue.js, d3, and d3 annotations. You will be assigned bonus points if your submission is written in Vue 3 and TypeScript.
+
+This repo contains a json of the price of Bitcoin from 2017-2018 (prices.json) and also data of 
+important events within the price range. (annotations.json).
 
 
 ![image](https://github.com/cyphercrescent/ccl-eval-fetp/assets/45539206/b5991049-9538-4a36-bfe8-d7ac0d0bd9bc)
+
+Fig 1.0 Line Chart with Annotations
 
 
 ## Use Cases
@@ -35,12 +41,9 @@ You will be assessed based on the following criteria:
    - Demonstrated proficiency in basic and intermediate d3 concepts, as reflected in the implementation of the chart and annotations.
 
 2. **Understanding of Vue/TypeScript Concepts:**
-   - Clear utilization of Vue.js and TypeScript concepts to build interactive and well-structured components.
+   - Clear utilization of Vue.js and TypeScript basic and intermediate concepts to build interactive and well-structured components.
 
-3. **Effective Use of Resources:**
-   - Application of the provided resources, showcasing an ability to learn and integrate external tools and libraries effectively.
-
-4. **Meaningful Work and Exploration:**
+3. **Meaningful Work and Exploration:**
    - Emphasis on meaningful work and exploration beyond the given foundation, showcasing creativity and initiative.
 
 We appreciate your dedication and effort in contributing to this project. The evaluation criteria are designed to recognize your skills and contributions. Feel free to explore and expand upon the given foundation to create an impactful visualization.
