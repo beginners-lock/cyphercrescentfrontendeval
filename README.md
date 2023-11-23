@@ -3,7 +3,7 @@
 This project aims to re-create a line chart depicting the price of Bitcoin from 2017-2018, along with annotations for important events. 
 The chart is implemented using Vue.js, d3, and d3 annotations. You will be assigned bonus points if your submission is written in Vue 3 and TypeScript.
 
-This repo contains a json of the price of Bitcoin from 2017-2018 (prices.json) and also data of 
+This repo contains a json of the price of Bitcoin from 2017-2018 [prices.json](https://github.com/cyphercrescent/ccl-eval-fetp/blob/main/prices.json) and also data of 
 important events within the price range. [annotations.json](https://github.com/cyphercrescent/ccl-eval-fetp/blob/main/annotations.json)
 
 
