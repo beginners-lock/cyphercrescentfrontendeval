@@ -6,8 +6,8 @@ The chart is implemented using Vue.js, d3, and d3 annotations. You will be assig
 This repo contains a json of the price of Bitcoin from 2017-2018 [prices.json](https://github.com/cyphercrescent/ccl-eval-fetp/blob/main/prices.json) and also data of 
 important events within the price range. [annotations.json](https://github.com/cyphercrescent/ccl-eval-fetp/blob/main/annotations.json)
 
+![image](https://github.com/cyphercrescent/ccl-eval-fetp/assets/45539206/9aba4f37-0939-4c8b-b565-f96dd671b07e)
 
-![image](https://github.com/cyphercrescent/ccl-eval-fetp/assets/45539206/b5991049-9538-4a36-bfe8-d7ac0d0bd9bc)
 
 Fig 1.0 Line Chart with Annotations
 
