@@ -53,7 +53,7 @@
 			//can use x, y directly instead of data
 			data: { date: "2017-08-01", value: 1600 },
 			className: "show-bg",
-			dy: 137,
+			dy: -100,
 			dx: 162
 		}];
 		
