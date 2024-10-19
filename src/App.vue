@@ -3,9 +3,11 @@
 	import { DataType } from "./utils/types";
 	import prices from "./assets/prices.json";
 	import { onMounted } from "vue";
+	import 'd3-svg-annotation';
+	import * as d3annotation from 'd3-svg-annotation';
 
 	const parseTime = d3.timeParse("%Y-%m-%d");
-	const parseMonth = d3.timeParse("%Y-%m-%d");
+	const timeFormat = d3.timeFormat("%d-%b-%y")
 
 	const dateFormat = (date: string) => {
 		return date.slice(0, date.indexOf('T'));
@@ -39,6 +41,46 @@
 		g.append("g").call(d3.axisLeft(y)).select(".domain").remove().append("text").attr("fill", "#000").attr("transform", "rotate(-90)").attr("y", 6).attr("dy", "0.71em").attr("text-anchor", "end").text("Price ($)");
 
 		g.append("path").datum(data).attr("fill", "none").attr("stroke", "steelblue").attr("stroke-linejoin", "round").attr("stroke-linecap", "round").attr("stroke-width", 1.5).attr("d", line);
+		//console.log(x.range())
+
+		
+		const annotations = [{
+			note: {
+				label: "Longer text to show text wrapping",
+				bgPadding: 20,
+				title: "Annotations :)"
+			},
+			//can use x, y directly instead of data
+			data: { date: "2017-08-01", value: 1600 },
+			className: "show-bg",
+			dy: 137,
+			dx: 162
+		}];
+		
+		const type = d3annotation.annotationLabel;
+		const makeAnnotations = d3annotation.annotation<DataType>()
+			.editMode(true)
+			//also can set and override in the note.padding property
+			//of the annotation object
+			.notePadding(15)
+			.type(type)
+			//accessors & accessorsInverse not needed
+			//if using x, y in annotations JSON
+			.accessors({
+				x: d => x(parseTime(dateFormat(d.date))!),
+				y: d => y(d.value)
+			})
+			.accessorsInverse({
+				date: (d:any) => x.invert(d.x),
+				value: (d:any) => y.invert(d.y)
+			})
+			.annotations(annotations);
+
+		
+
+		svg.append("g")
+			.attr("class", "annotation-group")
+			.call(makeAnnotations)
 	}
 
 	onMounted(()=>{
