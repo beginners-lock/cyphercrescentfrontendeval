@@ -7,7 +7,7 @@
 	import * as d3annotation from 'd3-svg-annotation';
 
 	const parseTime = d3.timeParse("%Y-%m-%d");
-	const timeFormat = d3.timeFormat("%d-%b-%y")
+	const timeFormat = d3.timeFormat("%d-%b-%y");
 
 	const dateFormat = (date: string) => {
 		return date.slice(0, date.indexOf('T'));
